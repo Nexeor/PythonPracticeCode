@@ -1,0 +1,19 @@
+pyg = 'ay'
+
+#Get the raw input for our code, then make it into variable "original"
+original = raw_input('Enter a word:')
+
+#make an if statement checking to see if the word has characters and if all characters are letters. If not, print "empty"
+if len(original) > 0 and original.isalpha():
+  #make all letters lowercase
+  word = original.lower()
+  #get the first letter as a variable
+  first = word[0]
+  #coctanate the word, the first letter, and "ay" under a new variable
+  new_word = word + first + pyg
+  #remove the first letter of the word
+  new_word = new_word[1:len(new_word)]
+  #print the word!
+  print new_word
+else:
+  print 'empty'

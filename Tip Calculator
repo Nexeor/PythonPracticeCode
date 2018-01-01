@@ -1,10 +1,11 @@
-# Assign the variable total on line 8!
+meal = rawinput("Enter cost of meal: ")
+tax = rawinput("Enter the percentage of tax on the meal: ")
+tip = rawinput("Enther the percentage that you would like to tip the waiter: "
 
-meal = 44.50
-tax = 6.75 / 100
-tip = 15.0 / 100
+tax = tax / 100
+tip = tax / 100
 
 meal = meal + meal * tax
-total = meal + meal*tip
+total = meal + meal * tip
 
 print("%.2f" % total)

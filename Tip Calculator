@@ -1,14 +1,20 @@
+# The users input for each value used in the calculations is taken
 meal = raw_input("Enter cost of meal: ")
 tax = raw_input("Enter the percentage of tax on the meal: ")
 tip = raw_input("Enter the percentage that you would like to tip the waiter: ")
 
+# These three lines convert the string values into floats so they can be used as numbers
 meal = float(meal)
+# These two lines are divided ny 100 in order to convert them into decimals from percentages
 tax = float(tax) / 100
 tip = float(tip) / 100
 
+# The converted values are then used to calculate the meal + tax, then meal + tax and tip
 meal = meal + meal * tax
 total = meal + meal * tip
 
+# The final value is tehn rounded to two decimals for simplicity
 total = ("%.2f" % total)
 
+# The total, rounded value is then printed to the user
 print "Your total cost is: " + total

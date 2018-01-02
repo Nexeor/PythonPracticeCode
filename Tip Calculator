@@ -1,6 +1,6 @@
-meal = rawinput("Enter cost of meal: ")
-tax = rawinput("Enter the percentage of tax on the meal: ")
-tip = rawinput("Enther the percentage that you would like to tip the waiter: "
+meal = raw_input("Enter cost of meal: ")
+tax = raw_input("Enter the percentage of tax on the meal: ")
+tip = raw_input("Enter the percentage that you would like to tip the waiter: ")
 
 tax = tax / 100
 tip = tax / 100

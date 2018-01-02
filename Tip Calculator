@@ -2,10 +2,13 @@ meal = raw_input("Enter cost of meal: ")
 tax = raw_input("Enter the percentage of tax on the meal: ")
 tip = raw_input("Enter the percentage that you would like to tip the waiter: ")
 
-tax = tax / 100
-tip = tax / 100
+meal = float(meal)
+tax = float(tax) / 100
+tip = float(tip) / 100
 
 meal = meal + meal * tax
 total = meal + meal * tip
 
-print("%.2f" % total)
+total = ("%.2f" % total)
+
+print "Your total cost is: " + total

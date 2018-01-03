@@ -1,13 +1,17 @@
+# This function
 def int_converter(n):
+    """Converts strings from user inputs into Integers"""
     return int(n)
 
 
 def hotel_cost(days):
-    nights = days - 1
+    """Returns the total hotel cost based on the numbers of days the user has chosen"""
+    nights = days - 1  # Calculates the number of nights by subtracting 1 from the total number of days
     return 140 * nights
 
 
 def plane_ride_cost(city):
+    """Returns the cost of the plane ride based on the city the user has chosen"""
     if city == "Charlotte":
         return 183
     elif city == "Tampa":
@@ -19,6 +23,7 @@ def plane_ride_cost(city):
 
 
 def rental_car_cost(days):
+    """Returns the total cost of the rental car based on the number of days from the user input, takes discounts into account as well"""
     cost = 40 * days
     if days >= 7:
         cost = cost - 50
@@ -28,9 +33,11 @@ def rental_car_cost(days):
 
 
 def trip_cost(city, days, spending_money):
-    return hotel_cost(days) + plane_ride_cost(city) + rental_car_cost(days) + spending_money
+    """Returns the total trip cost, including spending money"""
+    return hotel_cost(days) + plane_ride_cost(city) + rental_car_cost(days) + spending_money  # Calls the other three functions to calculate each value, before adding them together
 
 
+# Gets the users input and then calls the int_converter function if they must be used as Int
 city = raw_input("What city are you travelling too?")
 
 days = raw_input("How many days are you staying?")
@@ -39,4 +46,4 @@ days = int_converter(days)
 spending_money = raw_input("How much spending money are you bringing?")
 spending_money = int_converter(spending_money)
 
-print trip_cost(city, days, spending_money)
+print trip_cost(city, days, spending_money)  # Calls the trip_cost function using the user input values, then prints it
